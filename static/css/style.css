@@ -60,7 +60,7 @@ ul.post_list li .tags{
 
 a.tag_link{
   position:relative;
-  color:#ccc;
+  color:#bbb;
 }
 
 
@@ -137,7 +137,13 @@ ul.menu{
 .menu { text-align: left;}
 
 
-footer { text-align: left; color: #aaa;}
+footer { text-align: right; color: #ddd;}
+footer a{
+	color:#ccc;
+}
+footer a:visited{
+	color:#ccc;
+}
 a { text-decoration: none;}
 hr {
   border-style: solid;
