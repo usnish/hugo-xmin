@@ -1,3 +1,26 @@
+
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 body {
   max-width: 800px;
   margin: auto;
@@ -5,20 +28,119 @@ body {
   line-height: 1.5em;
 }
 
-/* header and footer areas */
-.menu { padding: 0; }
-.menu li { display: inline-block; }
-.article-meta, .menu a {
-  text-decoration: none;
-  background: #eee;
-  padding: 5px;
-  border-radius: 5px;
+a{  color:#0074D9;}
+a:visited{  color:#0074D9;}
+a:hover{color:#FF4136;}
+.menu a:hover{color:#FF4136;}
+li a:hover{color:#FF4136;}
+footer a:hover{color:#FF4136;}
+
+/* post list stuff */
+ul.post_list{
+  list-style: none;
+  position:relative;
 }
-.menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
-footer a { text-decoration: none; }
+
+
+a.post_link{
+  display:inline-block;
+  position:absolute;
+  left:200px;
+}
+
+ul.post_list li{
+  position:relative;
+}
+
+ul.post_list li .tags{
+  position:absolute;
+  top:0;
+  left:450px;
+}
+
+a.tag_link{
+  position:relative;
+  color:#ccc;
+}
+
+
+/*article stuff*/
+.article-meta{
+  text-align: center;
+  padding-top:2em;
+  padding-bottom:2em;
+}
+
+.title{
+  font-size:1.8em;
+  font-weight:bold;
+}
+.author{
+  font-size:1.0em;
+  margin-top:0.5em;
+}
+.article-meta .date{
+  font-size:0.8em;
+  font-style:italic;
+}
+
+p{
+  margin-bottom:1em;
+}
+
+em{
+  font-style:italic;
+}
+
+img[src$='#center']
+{
+    display: block;
+    margin: 0.7rem auto; 
+}
+
+img[src$='#floatleft']
+{
+    float:left;
+    margin: 0.7rem;  
+}
+
+img[src$='#floatright']
+{
+    float:right;
+    margin: 0.7rem;  
+}
+
+/* header and footer areas */
+nav{
+  position:relative;
+}
+
+nav #site_title{
+  white-space:nowrap;
+}
+
+ul.menu{
+  position:absolute;
+  top:0;
+  left:200px;
+}
+
+
+.menu { padding: 0; color:#000;}
+.menu li { display: inline-block; }
+.menu a {
+  text-decoration: none;
+  margin-right: 5px;
+  color: #aaa;  
+}
+
+.menu { text-align: left;}
+
+
+footer { text-align: left; color: #aaa;}
+a { text-decoration: none;}
 hr {
-  border-style: dashed;
+  border-style: solid;
   color: #ddd;
 }
 

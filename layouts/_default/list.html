@@ -6,11 +6,12 @@
 
 {{ .Content }}
 
-<ul>
+<ul class="post_list">
   {{ range (where .Data.Pages "Section" "!=" "") }}
   <li>
-    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-    <a href="{{ .URL }}">{{ .Title | markdownify }}</a>
+    <span class="date">{{ .Date.Format "2006 January 2" }}</span>
+    <a class="post_link" href="{{ .URL }}">{{ .Title | markdownify }}</a>
+    <div class='tags'>{{ range .Params.tags }}<span><a class="tag_link" href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">*{{ . }} </a></span>{{ end }}</div>
   </li>
   {{ end }}
 </ul>
